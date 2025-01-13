@@ -15,7 +15,5 @@ RUN wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v$VERSIO
     && chmod a+x php-cs-fixer \
     && mv php-cs-fixer /usr/local/bin/php-cs-fixer
 
-RUN export PHP_CS_FIXER_IGNORE_ENV=1
-
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
