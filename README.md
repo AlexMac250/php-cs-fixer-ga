@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: PHP-CS-Fixer
-      uses: docker://oskarstark/php-cs-fixer-ga
+      uses: docker://alexmac250/php-cs-fixer-ga
 ```
 
 _To use a custom config, e.g. `--diff` and `--dry-run` options:_
@@ -35,7 +35,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: PHP-CS-Fixer
-      uses: docker://oskarstark/php-cs-fixer-ga
+      uses: docker://alexmac250/php-cs-fixer-ga
 +     with:
 +       args: --config=.project.php_cs --diff --dry-run
 ```
@@ -61,7 +61,7 @@ jobs:
             ${{ runner.OS }}-${{ github.repository }}-phpcsfixer-
 
       - name: PHP-CS-Fixer
-        uses: docker://oskarstark/php-cs-fixer-ga
+        uses: docker://alexmac250/php-cs-fixer-ga
 ```
 
 **You can copy/paste the `.github/` folder (under `examples/`) to your project and that's all!**
@@ -94,7 +94,7 @@ jobs:
           echo "EOF" >> $GITHUB_ENV
 
       - name: PHP-CS-Fixer
-        uses: docker://oskarstark/php-cs-fixer-ga
+        uses: docker://alexmac250/php-cs-fixer-ga
         with:
           args: --config=.php-cs-fixer.dist.php -v --dry-run --stop-on-violation --using-cache=no ${{ env.PHPCS_EXTRA_ARGS }}"
 ```
@@ -102,15 +102,15 @@ jobs:
 ## Docker
 
 A Docker image is built automatically and located here:
-https://hub.docker.com/r/oskarstark/php-cs-fixer-ga
+https://hub.docker.com/r/alexmac250/php-cs-fixer-ga
 
 You can run it in any given directory like this:
 
 ```bash
-docker run --rm -it -w=/app -v ${PWD}:/app oskarstark/php-cs-fixer-ga:latest
+docker run --rm -it -w=/app -v ${PWD}:/app alexmac250/php-cs-fixer-ga:latest
 ```
 
 ## A picture is worth a thousand words
 
 You can find a working and not working PR here:
-https://github.com/OskarStark/test-php-cs-fixer-ga/pulls
+https://github.com/AlexMac250/test-php-cs-fixer-ga/pulls

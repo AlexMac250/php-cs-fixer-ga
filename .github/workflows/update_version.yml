@@ -34,10 +34,10 @@ jobs:
               uses: stefanzweifel/git-auto-commit-action@v4
               id: commit
               with:
-                  commit_author: "Oskar Stark <oskarstark@googlemail.com>"
+                  commit_author: "Aleksandr Vasilenko <alex.forbits@gmail.com>"
                   commit_message: "Enhancement: Upgrade to PHP-CS-Fixer ${{ steps.fetch_version.outputs.latest }}"
-                  commit_user_email: "oskarstark@googlemail.com"
-                  commit_user_name: "Oskar Stark"
+                  commit_user_email: "alex.forbits@gmail.com"
+                  commit_user_name: "Aleksandr Vasilenko"
 
             - name: "Tag version ${{ steps.fetch_version.outputs.latest }}"
               uses: "anothrNick/github-tag-action@1.30.0"
@@ -71,7 +71,7 @@ jobs:
           id: meta
           uses: crazy-max/ghaction-docker-meta@v2
           with:
-              images: oskarstark/php-cs-fixer-ga
+              images: alexmac250/php-cs-fixer-ga
               tags: |
                   type=raw,value=latest,enable=${{ endsWith(github.ref, 'master') }}
                   type=ref,event=tag
