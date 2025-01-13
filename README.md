@@ -1,5 +1,7 @@
 # GitHub Action for PHP-CS-Fixer
 
+forked from [OskarStark/php-cs-fixer-ga](https://github.com/OskarStark/php-cs-fixer-ga)
+
 > NOTE: If you didn't create a `.php-cs-fixer.dist.php` file, do that first before adding this workflow. An example of this file created by the creators of PHP-CS-Fixer can be found [here](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/.php-cs-fixer.dist.php).
 
 ## Usage
