@@ -13,7 +13,7 @@ ENV VERSION=3.67.1
 
 RUN wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v$VERSION/php-cs-fixer.phar -O php-cs-fixer \
     && chmod a+x php-cs-fixer \
-    && mv php-cs-fixer /usr/local/bin/php-cs-fixer \
+    && mv php-cs-fixer /usr/local/bin/php-cs-fixer
 
 RUN export PHP_CS_FIXER_IGNORE_ENV=1
 
